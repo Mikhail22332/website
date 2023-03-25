@@ -1,0 +1,264 @@
+
+*{
+    box-sizing: border-box;
+    
+    background-color: rgb(255, 255, 255);
+}
+
+header{
+    display: flex;
+justify-content: space-between;
+    align-items: center;
+    padding: 30px 30px;
+}
+
+.header li, a, button{
+    font-size: 25px;
+    color: black;
+    text-decoration: none;
+}
+
+.nav-links{
+    list-style: none;
+}
+
+.nav-links li{
+    display: inline-block;
+    padding: 0px 20px;
+    transition: transform 0.5s ease;
+}
+.nav-links li:hover{
+    transform: translateX(10px);
+}
+.nav-links li a{
+    transition: all 0.3s ease 0s;
+}
+
+.nav-links li a:hover{
+    color: blueviolet;
+}
+
+.cta button{
+    padding: 9px 25px;
+    background-color: rgba(0, 136,169,1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.about-me{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    margin-top: 40px;
+}
+.userpic{
+    width: 500px;
+    overflow: hidden;
+    padding-left: 40px;
+}
+
+.userpic img{
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+
+.describtion{
+    max-width: 600px;
+    margin-right: 40px;
+
+}
+
+.describtion h1{
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.describtion p{
+    font-size: 20px;
+    align-items:center;
+    padding: 5px;
+    text-align:center;
+}
+
+
+.card-wrapper{
+    background-color: #ffffff;
+    display: contents;
+    text-align: center;
+    margin: 40px;
+    padding: 40px;
+}
+.card-wrapper h4{
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+.card-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.card{
+    margin: 20px;
+    width: 400px;
+    height: 600px;
+    border: 2px solid #3e0ec2;
+    display: grid;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: all 0.3s easy-in-out;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    background-color: rgb(45, 156, 207);
+}
+.card::after{
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: opacity 0.3s ease-in-out;
+}
+
+.card:hover{
+    transform: scale(1.05,1.05);
+}
+.card::after{
+    opacity: 1;
+}
+
+.card img{
+    width: 100%;
+    height: 300px;
+    margin-bottom: 15px;
+    background-color: aqua;
+    background-size: cover;
+}
+.details{
+    text-align: center;
+    background-color: rgb(244, 244, 245);
+    padding-bottom: 20px;
+    bottom: 0px;
+    background-color: rgb(45, 156, 207);
+}
+.card-title{
+    background-color: rgb(45, 156, 207);
+}
+
+.card-title h2{
+    font-size: 34px;
+    font-size: 20px;
+    margin-top: 20px;
+    background-color: rgb(45, 156, 207);
+    ;
+}
+.card-body{
+    font-size: 18px;
+    background-color: rgb(45, 156, 207);
+}
+.card-img{
+    max-width: 400px;
+    margin: 15px;
+    background: #fff;
+    
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.card footer{
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-align: center;
+    background-color: rgb(45, 156, 207);
+}
+
+.button-read{
+    padding: 9px 25px;
+    background-color: rgb(0, 45, 169);
+    border: none;
+    transition: transform 0.5s ease;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.button-read:hover{
+    transition: all 0.3s ease 0s;
+    transform: matrix3d(10px);
+    color: rgb(250, 19, 238);
+}
+
+
+
+
+@media only screen and (max-width: 500px){
+    .header{
+        padding: 0px 20px;
+        display: -webkit-inline-box;
+    }
+    .cta{
+        width:60px;
+    }
+    .cta button{
+        padding: 10px 20px;
+        font-size: 16px;
+        margin-left: 1px;
+    }
+    
+    .nav-links li{
+        transition: transform 0.5s ease;
+        padding: 5px 5px;
+    }
+    .nav-links li:hover{
+        transform: translateX(5px);
+    }
+
+    .nav-links li a{
+        font-size: 18px;
+    }
+    .about-me{
+        margin-top: 10px;
+    }
+    
+    .userpic{
+        min-width: 65%;
+    }
+    .userpic img{
+        height: 300px;
+    }
+    
+    .describtion{
+        
+        margin-right: 5px;
+    }
+    
+    .describtion h1{
+        font-size: 24px;
+    }
+    
+    .describtion p{
+        font-size: 15px;        
+    }
+    .userpic{
+        padding-left: 30px;
+    }
+    .card{
+        margin-bottom: 25px;
+        margin-left: 1px;
+        margin-right: 1px;
+        width: 300px;
+        padding: 5px;
+        border-radius: 5px;
+    }
+    .card footer{
+        padding-bottom: 5px;
+        padding-top: 5px;
+    }
+    .card:hover{
+        transform: scale(1.1,1.1);
+    }
+}

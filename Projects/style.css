@@ -1,0 +1,161 @@
+*{
+    box-sizing: border-box;
+    
+    background-color: rgb(255, 255, 255);
+}
+
+header{
+    display: flex;
+justify-content: space-between;
+    align-items: center;
+    padding: 30px 30px;
+}
+
+.header li, a, button{
+    font-size: 25px;
+    color: black;
+    text-decoration: none;
+}
+
+.nav-links{
+    list-style: none;
+}
+
+.nav-links li{
+    display: inline-block;
+    padding: 0px 20px;
+    transition: transform 0.5s ease;
+}
+.nav-links li:hover{
+    transform: translateX(10px);
+}
+.nav-links li a{
+    transition: all 0.3s ease 0s;
+}
+
+.nav-links li a:hover{
+    color: blueviolet;
+}
+
+.cta button{
+    padding: 9px 25px;
+    background-color: rgba(0, 136,169,1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.main{
+    text-align: center;
+    max-width: 1200px;
+}
+.describtion{
+    text-align: center;
+   
+}
+
+.describtion h2{
+    font-size: 32px;
+    padding: 10px;
+}
+
+.text{
+    font-size: 20px;
+    margin: 10px;
+    padding: 10px;
+}
+
+
+
+.galery{
+    background-color: #ffffff;
+    text-align: center;
+    margin: 40px;
+    padding: 40px;
+}
+
+.galery-list{
+    flex-wrap: wrap;
+    justify-content: center;
+    display: flex;
+}
+
+.image{
+    height: 400px; 
+}
+
+.image img{
+    background-size: cover;
+    height: 100%;
+    padding: 30px;
+    margin: 10px;
+}
+
+.code{
+    max-width: 1200px;
+    text-align: center;
+    
+}
+.code-piece{
+    text-align: left;
+    width: 600px;
+}
+
+.code h2{
+    font-size: 32px;
+    
+}
+.code p{
+    font-size: 24px;
+    
+}
+
+
+
+@media only screen and (max-width: 500px){
+    .header{
+        padding: 0px 20px;
+        display: -webkit-inline-box;
+    }
+    .cta{
+        width:60px;
+    }
+    .cta button{
+        padding: 10px 20px;
+        font-size: 16px;
+        margin-left: 1px;
+    }
+    
+    .nav-links li{
+        transition: transform 0.5s ease;
+        padding: 5px 5px;
+    }
+    .nav-links li:hover{
+        transform: translateX(5px);
+    }
+
+    .nav-links li a{
+        font-size: 18px;
+    }
+    
+    .galery{
+        background-color: #ffffff;
+        text-align: center;
+        margin: 20px;
+        padding: 20px;
+    }
+    
+    .image{
+        height: 200px;
+        padding: 10px; 
+    }
+    
+    .image img{
+        padding: 10px;
+
+        margin: 10px;
+    }
+    .code-piece{
+        font-size: 12px;
+        width: 300px;
+    }
+}

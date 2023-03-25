@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Mikhail Filatov</title> 
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="file:///D:/UNIVER/WWW/Project/index.html">Home</a></li>
+                    <li><a href="file:///D:/UNIVER/WWW/Project/Projects/projects.html">Projects</a></li>
+                    <li><a href="file:///D:/UNIVER/WWW/Project/AboutMe/about.html">About Me</a></li>
+                </ul>
+            </nav>
+            <a href="+48555555555" class="cta">
+                <button>Contact</button>
+            </a>
+        </header>
+        <main>
+            <section class="describtion">
+                <h2>Checkers</h2>
+                <div class="text">
+                    <p>Checkers was a final team project at the end of 3 semester. My friend and I implemeted 3 types of checkers: Russian, English, Polish. You can play that game on different laptops thanks to socket technology.</p>
+                </div>
+            </section>
+            <section class="galery">
+                <div class="galery-list">
+                    <div class="image">
+                        <img src="photo3.jpg">  
+                    </div>
+                    <div class="image">
+                        <img src="photo2.jpg"> 
+                    </div>
+                </div>
+            </section>
+            <section class="code">
+                <h2>Code Section</h2>
+                <p>Recursion method is responsible for finding the longest bitting chain in Polish version.</p>
+                <pre class="code-piece">
+                    <code>
+protected boolean isAnyPawnCapturePossible(Board board, int startX, int startY){
+    Piece pieceAtStart = board.getField(startX, startY);
+    int directionX = 0;
+    if(pieceAtStart.getPieceColor() == Color.White){
+        directionX = -1;
+    }
+    if(pieceAtStart.getPieceColor() == Color.Black){
+        directionX = 1;
+    }
+    for(int j = -1; j &lt;= 1; j += 2) {
+        int endX = startX + directionX * 2;
+        int endY = startY + j * 2;
+
+        boolean outOfBounds = outOfBounds(board, endX, endY);
+        if (outOfBounds || Math.abs(endX-startX) != 2 || Math.abs(endY-startY) != 2) {
+            continue;
+        }
+        Piece pieceAtEnd = board.getField(endX, endY);
+        if(pieceAtEnd.getPieceType() != PieceType.Blank){
+            continue;
+        }
+        int midX = (startX + endX) / 2;
+        int midY = (startY + endY) / 2;
+        Piece pieceAtMiddle = board.getField(midX, midY);
+        if(pieceAtMiddle.getPieceType() == PieceType.Blank) {
+            continue;
+        }
+        if(pieceAtMiddle.getPieceColor() != playerMark) {
+            return true;
+        }
+    }
+    return false;
+}
+                    </code>
+                </pre>
+            </section>
+
+        </main>
+        <footer>
+
+        </footer>
+    </body>
+</html>
